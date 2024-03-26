@@ -1,0 +1,548 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Akaya Kanadaka', cursive; */
+}
+
+:root {
+    --primary: indianred;
+    /* --secondary: rgba(15, 10, 29, 0.849); */
+    --secondary: rgba(5, 4, 5, 0.849);
+    --light: #2f3640;
+}
+
+header {
+    width: 100;
+    height: 100vh;
+
+}
+
+.nav1 {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 2px 0px 3px grey;
+    text-align: center;
+}
+
+.nav1 .left {
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+
+.nav1 .left a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 0px 5px;
+}
+
+.nav1 .right {
+    flex-basis: 50%;
+}
+
+.nav1 .right i {
+    font-size: 20px;
+    margin: 0px 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    /* transition: 0.45 ease-in-out; */
+    transition: all 0.3s;
+}
+
+/* here hover etribute is not run ,chek after */
+.nav1 .right i:hover {
+    transform: rotate(360deg);
+}
+
+/* ..........nav2............................... */
+.nav2 {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.nav2 .nav2-left,
+.nav2 .nav2-center,
+.nav2 .nav2-right {
+    flex-basis: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.nav2 .nav2-left i {
+    margin: 0px 5px;
+    margin-left: 15px;
+
+}
+
+.nav2 .nav2-center h1 {
+    color: var(--primary);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.nav2 .nav2-center h1 span {
+    color: var(--secondary);
+}
+
+.nav2 .nav2-center p {
+    color: grey;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.nav2 .nav2-right i {
+    margin: 0px 5px;
+}
+
+/* .....................nav3......................... */
+.nav3 {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav3 ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav3 ul li {
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    z-index: 99;
+}
+
+.nav3 ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: block;
+}
+
+.nav3 ul li a:hover {
+    color: var(--primary);
+}
+
+.nav3 ul li i {
+    color: var(--primary);
+    margin: 0px 5px;
+}
+
+.nav3 ul ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+}
+
+.nav3 ul ul li {
+    background-color: white;
+    border-bottom: 1px solid var(--primary);
+}
+
+.nav3 ul li:hover>ul {
+    display: block;
+}
+
+/*.............. featured.......................  */
+.featured {
+    width: 100%;
+    height: 70vh;
+    /* background: url('img/g1.jpg'); */
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 30%, rgba(255, 255, 255, 0.2)), url('img/g1.jpg');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.featured-text {
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+
+.featured-text button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary);
+    margin: 20px 0px;
+    color: white;
+
+}
+
+.latest {
+    padding: 50px 100px;
+}
+
+.product-intro {
+    text-align: center;
+}
+
+.product-intro h1 {
+    color: var(--primary);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.product-intro h1 span {
+    color: var(--secondary);
+}
+
+.product-intro p {
+    color: grey;
+    margin: 15px 0px;
+}
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 4rem;
+    flex-wrap: wrap;
+}
+
+.card-container .card {
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.card i {
+    color: goldenrod;
+}
+
+.card button {
+    color: white;
+    background-color: var(--secondary);
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    padding: 5px 20px;
+}
+
+.card:hover img,
+.card:hover h1 {
+    width: 80%;
+    color: var(--primary);
+}
+
+.card::before {
+    content: '20% off';
+    width: 25%;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--primary);
+    padding: 0px 4px;
+    transform: rotate(-20deg);
+}
+
+.trends {
+    padding: 50px 100px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ............................container mySwiper */
+.trends .swiper-container {
+    width: 100%;
+    padding: 50px;
+}
+
+.trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #f9e3e5 60%, #f8dede 40.1%);
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #150e9f;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #3308f6;
+}
+
+#payment-gateway input {
+    padding: 10px 20px;
+
+}
+
+
+footer {
+    background-color: var(--secondary);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer div {
+    flex-basis: 30%;
+}
+
+#sidenav {
+    display: none;
+}
+
+#menubar {
+    display: none;
+}
+
+@media only screen and (max-width: 769px) {
+
+    .nav1 {
+        position: relative;
+        z-index: 2;
+        background-color: white;
+    }
+
+    .right i {
+        font-size: 15px;
+        margin-top: 0px 5px;
+    }
+
+    .nav2 {
+        width: 100%;
+        height: 80px;
+
+    }
+
+    .nav2 .nav2-left i {
+        margin-left: 0px;
+
+    }
+
+    .nav2 .nav2-center h1 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .nav2 .nav2-center p {
+        color: grey;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .nav2 .nav2-right i {
+        margin: 0px 5px;
+    }
+
+    .nav3 {
+        display: none;
+    }
+
+    .featured {
+        background-attachment: fixed;
+    }
+
+    .latest {
+        padding: 0px 50px;
+    }
+
+    .product-intro {
+        text-align: center;
+    }
+
+    .product-intro h1 {
+        color: var(--primary);
+        letter-spacing: 0.2rem;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .product-intro h1 span {
+        color: var(--secondary);
+    }
+
+    .product-intro p {
+        color: grey;
+        margin: 15px 0px;
+    }
+
+    .card-container {
+        margin: 2rem 0;
+    }
+
+    .card-container .card {
+        flex-basis: 100%;
+        padding: 0.8rem;
+        position: relative;
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card i {
+        color: goldenrod;
+    }
+
+    .card button {
+        color: white;
+        background-color: var(--secondary);
+        border: none;
+        outline: none;
+        margin-top: 15px;
+        padding: 5px 20px;
+    }
+
+    .trends {
+        padding: 20px 50px;
+    }
+
+    .trends .swiper-container {
+        width: 100%;
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.01);
+    }
+
+    .trends .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 360px;
+        height: 360px;
+    }
+
+    .trends .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    footer div {
+        flex-basis: 50%;
+        margin: 10px 0px;
+    }
+}
